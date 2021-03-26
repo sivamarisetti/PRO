@@ -1,0 +1,53 @@
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:rgb(243, 4, 4);
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Name</th>
+        <th>Age</th>
+        <th>Number</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+<script>
+	var myArray = [
+	    {'name':'Michael', 'age':'30', 'number':'123456789'},
+	    {'name':'Mila', 'age':'32', 'number':'25986565235'},
+	    {'name':'Paul', 'age':'29', 'number':'256854955325'},
+	    {'name':'Dennis', 'age':'25', 'number':'1254698653'},
+	    {'name':'Tim', 'age':'27', 'number':'12564896'},
+	    {'name':'Erik', 'age':'24', 'number':'1235689'},
+	]
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].age}</td>
+							<td>${data[i].number}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>

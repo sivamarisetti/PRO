@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="
+sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    th {
+        color :"green"
+    }
+</style>
+<table class="table table-striped">
+    <tr class="bg-info">
+        <th> Name</th>
+        <th>Age</th>
+        <th>Location</th>
+        <th>Number</th>
+    </tr>
+    <tbody id="siva">
+
+    </tbody>
+</table>
+<script>
+    var bujji=[
+        {'name':'siva', 'age':'22', 'location':'chebrole', 'number':'9553282295'},
+        {'name':'siva1', 'age':'23', 'location':'eluru', 'number':'9948751986'},
+        {'name':'siva2', 'age':'24', 'location':'bhimadole', 'number':'9948356354'},
+        {'name':'siva3', 'age':'25', 'location':'lanka', 'number':'9949797980'},
+        {'name':'siva4', 'age':'26', 'location':'rachuru', 'number':'9948254314'},
+        {'name':'siva5', 'age':'27', 'location':'tpgudem', 'number':'7660871774'},
+        {'name':'siva6', 'age':'28', 'location':'unguturu', 'number':'9948842730'},
+        {'name':'siva7', 'age':'29', 'location':'narayanapuram', 'number':'9177359774'},
+        {'name':'siva8', 'age':'30', 'location':'akividu', 'number':'9545534974'},
+    ]
+
+    buildTable(bujji)
+
+    function buildTable(x){
+        var y = document.getElementById('siva')
+        for(var i=0;i<x.length;i++){
+            var row =`<tr>
+                       <td>${x[i].name}</td>
+                       <td>${x[i].age}</td>
+                       <td>${x[i].location}</td>
+                       <td>${x[i].number}</td>
+                      </tr>`
+                      y.innerHTML += row
+        }
+    }
+
+</script>
+
+
+
+
+
+
